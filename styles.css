@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    color:#f0f0f0
+}
+
+.backgroundAll {
+    background: url('Imagenes/calculosDos.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.imagenCentrada{
+    display: block;
+    margin: 0 auto;
+    max-width: 30%;
+    padding: 20px;
+}
+
+.logoCalculadora{
+    max-width: 30%;
+    margin: auto;
+}
+
+.logoCalculadora:hover{
+    animation: rotarIcono 2s linear infinite;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    color:#f0f0f0
+}
+
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+p#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color:#f0f0f0
+}
+
+.container {
+    background-color: rgba(2, 2, 82, 0.952);
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    display: block;
+    max-width: 600px; /* Por ejemplo, ajusta este valor según tus preferencias */
+    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+}
+
+@keyframes rotarIcono{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
