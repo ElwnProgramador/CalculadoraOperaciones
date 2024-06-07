@@ -1,17 +1,24 @@
 function calcularFactorial() {
-    const number = document.getElementById('number').value.trim();
-    
-    if (number === '' || isNaN(number)) {
-        alert('Por favor, ingresa un número válido.');
+    const number = parseInt(document.getElementById('number').value);
+    const resultElement = document.getElementById('result');
+
+    if (isNaN(number)) {
+        alert("Por favor, ingrese un número.");
+        resultElement.innerText = ""; // Limpiar el resultado
         return;
     }
 
-    const parsedNumber = parseInt(number);
-    let factorial = 1;
+    if (number < 0) {
+        alert("Por favor, ingrese un número positivo.");
+        resultElement.innerText = ""; // Limpiar el resultado
+        return;
+    }
 
-    for (let i = 1; i <= parsedNumber; i++) {
+    let factorial = 1;
+    for (let i = 1; i <= number; i++) {
         factorial *= i;
     }
 
-    document.getElementById('result').innerText = `El factorial de ${parsedNumber} es ${factorial}.`;
+    resultElement.innerText = `El factorial de ${number} es ${factorial}.`;
+    resultElement.className = "output success"; // Aplica estilos dinámicos
 }
