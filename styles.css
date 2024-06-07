@@ -50,7 +50,7 @@ button {
 p#result {
     margin-top: 20px;
     font-weight: bold;
-    color:#f0f0f0
+    color:#050000
 }
 
 .container {
@@ -69,4 +69,11 @@ p#result {
     }to{
         transform: rotateY(360deg);
     }
+}
+.success {
+    color: #008000; /* Color verde para indicar éxito */
+    background-color: #74e46a; /* Fondo gris claro */
+}
+.factorial {
+    font-weight: bold;
 }
